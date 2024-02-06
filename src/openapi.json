@@ -1,0 +1,155 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+        "title": "My API",
+        "version": "1.0",
+        "x-logo": {
+            "url": ""
+        },
+        "contact": {}
+    },
+    "paths": {
+        "/auth/validate": {
+            "summary": "",
+            "get": {
+                "tags": [
+                    "auth"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "you are successfully authenticated",
+                        "x-last-modified": 1707213636837,
+                        "headers": {},
+                        "content": {},
+                        "links": {}
+                    },
+                    "401": {
+                        "description": "you are not authenticated",
+                        "x-last-modified": 1707213652517
+                    }
+                },
+                "parameters": []
+            },
+            "x-last-modified": 1707212792776
+        },
+        "/auth/register": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "user created",
+                        "x-last-modified": 1707213636837,
+                        "headers": {},
+                        "content": {},
+                        "links": {}
+                    },
+                    "400": {
+                        "description": "some thing went wrong",
+                        "x-last-modified": 1707213652517
+                    }
+                },
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "username",
+                                    "password",
+                                    "email"
+                                ],
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": []
+            },
+            "x-last-modified": 1707213666251
+        },
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "you are successfully authenticated",
+                        "x-last-modified": 1707213636837,
+                        "headers": {},
+                        "content": {},
+                        "links": {}
+                    },
+                    "401": {
+                        "description": "you are not authenticated check username or password",
+                        "x-last-modified": 1707213652517
+                    }
+                },
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "username",
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {},
+        "schemas": {},
+        "headers": {},
+        "responses": {},
+        "parameters": {},
+        "links": {},
+        "callbacks": {}
+    },
+    "tags": [
+        {
+            "name": "auth",
+            "x-last-modified": 1707212773804
+        }
+    ],
+    "servers": [
+        {
+            "url": "https://localhost:3000",
+            "description": "",
+            "variables": {},
+            "x-last-modified": 1707212767469
+        }
+    ],
+    "security": []
+}
