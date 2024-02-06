@@ -10,6 +10,9 @@ pnpm db:migrate
 pnpm dev
 ```
 
+# api docs
+if you want to go to api docs then go to url `/api-docs`
+
 
 
 
